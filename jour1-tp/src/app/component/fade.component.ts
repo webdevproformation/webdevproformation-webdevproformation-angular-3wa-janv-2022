@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger , transition , style, animate } from "@angular/animations";
+import { trigger , transition , style, animate , state } from "@angular/animations";
 
 @Component({
   selector: 'fade',
@@ -12,12 +12,9 @@ import { trigger , transition , style, animate } from "@angular/animations";
   `,
   animations : [
     trigger("slideInOut" , [
-      transition("void => *" , [
-        style({transform : "translateX(300px)"}),
+      state("void",style({transform : "translateX(300px)"})),
+      transition("void <=> *" , [
         animate(700)
-      ]),
-      transition("* => void", [
-        animate(700 , style({transform : "translateX(300px)"}))
       ])
     ]),
     trigger( "fadeInOut" , [ 
