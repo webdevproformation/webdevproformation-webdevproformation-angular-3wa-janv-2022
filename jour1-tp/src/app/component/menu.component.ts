@@ -7,9 +7,8 @@ import { Component, OnInit } from '@angular/core';
       <ul>
         <li><a routerLink="/">Accueil</a></li>
         <li><a routerLink="/contact">Nous contacter</a></li>
-        <li><a routerLink="/login">Connexion</a>
-          <ul></ul>
-        </li>
+        <li><a routerLink="/client">Client</a></li>
+        <li><a routerLink="/login">Connexion</a></li>
       </ul>
     </nav>
   `,

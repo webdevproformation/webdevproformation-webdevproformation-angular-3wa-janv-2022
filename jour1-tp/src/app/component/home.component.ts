@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService} from "../service/data.service";
+import { PostService } from "../service/post.service";
 import {Post} from "../service/post"
 @Component({
   selector: 'home',
@@ -20,7 +20,7 @@ import {Post} from "../service/post"
 })
 export class HomeComponent implements OnInit {
   public articles : Array<Post> = [];
-  constructor( private data : DataService) { }
+  constructor( private data : PostService) { }
   ngOnInit(): void {
     this.data.getData().subscribe( articles => 
       this.articles = articles );

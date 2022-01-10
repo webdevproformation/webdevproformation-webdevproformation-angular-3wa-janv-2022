@@ -9,6 +9,7 @@ import { ContactComponent } from './component/contact.component';
 import { MenuComponent } from './component/menu.component';
 import { LoginComponent } from './component/login.component';
 import { PageComponent } from './component/page.component';
+import { ClientComponent } from './component/client.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PageComponent } from './component/page.component';
     ContactComponent,
     MenuComponent,
     LoginComponent,
-    PageComponent
+    PageComponent,
+    ClientComponent
   ],
   imports: [
     BrowserModule,

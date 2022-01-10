@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { Observable } from 'rxjs';
 import { mergeMap } from "rxjs/operators";
-import { DataService } from "../service/data.service";
+import { PostService } from "../service/post.service";
 import { Post } from '../service/post';
 @Component({
   selector: 'page',
@@ -17,7 +17,7 @@ import { Post } from '../service/post';
   ]
 })
 export class PageComponent implements OnInit {
-  constructor( private activePage : ActivatedRoute , private data : DataService) { }
+  constructor( private activePage : ActivatedRoute , private data : PostService) { }
   public article : Post | undefined ;  
   ngOnInit(): void {
     // récupérer l'id de la page appelée
@@ -32,7 +32,6 @@ export class PageComponent implements OnInit {
       mergeMap( reponse =>  this.data.getOne( reponse.id ))
     )
     .subscribe( article => this.article = article  )
-
   }
 
 }
