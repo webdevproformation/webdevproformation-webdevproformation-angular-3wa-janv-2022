@@ -1,0 +1,16 @@
+Programme de la dernière semaine :
+
+reactive form
+rxjs => Subject 
+Authentification / autorisation
+Google Base de données + Authentification
+Module @NgModule({})
+Animation => gestion des animations 
+Angular material (concurrent de Bootstrap)
+Déployer le projet sur un hébergement 
+créer des Directives 
+Pipe + créer nos propres Pipe {{ variable  }}
+
+=> Test d'intégration / test e2e (Karma) ... !!! 
+
+

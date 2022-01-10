@@ -10,6 +10,7 @@ import { MenuComponent } from './component/menu.component';
 import { LoginComponent } from './component/login.component';
 import { PageComponent } from './component/page.component';
 import { ClientComponent } from './component/client.component';
+import { ClientOneComponent } from './component/client-one.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ClientComponent } from './component/client.component';
     MenuComponent,
     LoginComponent,
     PageComponent,
-    ClientComponent
+    ClientComponent,
+    ClientOneComponent
   ],
   imports: [
     BrowserModule,

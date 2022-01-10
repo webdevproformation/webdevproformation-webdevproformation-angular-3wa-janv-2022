@@ -5,6 +5,7 @@ import { ContactComponent} from "./component/contact.component"
 import { LoginComponent } from './component/login.component';
 import {PageComponent} from "./component/page.component" ;
 import { ClientComponent } from './component/client.component';
+import { ClientOneComponent } from './component/client-one.component';
 
 // router => url => Composant à afficher
 const routes: Routes = [
@@ -13,6 +14,8 @@ const routes: Routes = [
   {path : "contact" , component : ContactComponent} ,
   {path : "login" , component : LoginComponent},
   {path : "page/:id/:title" , component: PageComponent },
+  {path : "client/:id" , component: ClientOneComponent },
+  // l'ordre de déclaration des routes IMPORTANT mettre AVANT client/:id
   {path : "client" , component: ClientComponent },
 
 ];
