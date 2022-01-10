@@ -11,6 +11,7 @@ import { LoginComponent } from './component/login.component';
 import { PageComponent } from './component/page.component';
 import { ClientComponent } from './component/client.component';
 import { ClientOneComponent } from './component/client-one.component';
+import { NotFoundComponent } from './component/not-found.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ClientOneComponent } from './component/client-one.component';
     LoginComponent,
     PageComponent,
     ClientComponent,
-    ClientOneComponent
+    ClientOneComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

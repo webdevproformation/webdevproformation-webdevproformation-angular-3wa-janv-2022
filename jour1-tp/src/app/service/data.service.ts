@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import {Observable} from "rxjs"
+import {Observable , of} from "rxjs";
+import { catchError } from "rxjs/operators";
 @Injectable({
   providedIn: 'root'
 })
@@ -18,6 +19,6 @@ export class DataService<T> {
   public getOne( idArticle : number ){
     //return this.httpService.get<T>(`${this.urlService}/${idArticle}`)
     // rdv 11h16 bon café !!
-    return this.httpService.get(`${this.urlService}/${idArticle}`) as Observable<T>
+    return (this.httpService.get(`${this.urlService}/${idArticle}`) as Observable<T>)
   }
 }
