@@ -1,0 +1,35 @@
+Dans Angular => créer des animations 
+
+composant / balise => tous les éléments visuel
+
+state initial  ===========> state final 
+
+                transition()
+
+// -----------------------
+
+3 states / états possible
+void => l'etat lorsqu'il n'est pas dans le DOM
+*    => * l'état lorsque la balise est affichée dans le DOM
+          sans mise en forme
+personnalisé =>  l'état de l'élément affiché dans le DOM avec un mise en forme 
+
+@Component({
+    selector : "",
+    template : `
+        <h1 @animation1></h1>
+        <p @animation2></p>
+        <a routerLink="/" [@animation3]="'etat'"></a>
+    `,
+    styles : [],
+    animations : [
+        trigger( "animation1" , [ state() , transition() ] ),
+        trigger( "animation2" , [ state() , transition() ] ),
+        trigger( "animation3" , [ state() , transition() ] ),
+    ]
+     // créer votre animation 
+})
+export class AComponent{}
+
+// activer un module app.module.ts 
+

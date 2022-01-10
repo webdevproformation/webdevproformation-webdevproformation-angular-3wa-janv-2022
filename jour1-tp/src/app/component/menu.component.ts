@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+// rdv 15h27 => animation avec Angular 
 @Component({
   selector: 'menu',
   template: `
@@ -11,8 +11,7 @@ import { Component, OnInit } from '@angular/core';
         <li><a routerLink="/animation" routerLinkActive="actif">Animation</a></li>
         <li><a routerLink="/login" routerLinkActive="actif">Connexion</a></li>
       </ul>
-    </nav>
-  `,
+    </nav>`,
   styles: [
       `:host{ /* sélecteur qui permet de sélectionner la balise qui contient votre vue*/
         padding: 0;
