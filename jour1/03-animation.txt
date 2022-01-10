@@ -33,3 +33,11 @@ export class AComponent{}
 
 // activer un module app.module.ts 
 
+// cas pratique : 
+// dans le composant animation ajouter une nouvelle balise 
+<h1>titre</h1>
+
+au moment où vous affichez le composant animation (cliquer sur le lien du menu )
+
+le titre se déplace horizontalement de gauche vers la droite de 300px en 1 seconde
+
