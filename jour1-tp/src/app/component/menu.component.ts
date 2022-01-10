@@ -5,16 +5,20 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <nav>
       <ul>
-        <li><a routerLink="/">Accueil</a></li>
-        <li><a routerLink="/contact">Nous contacter</a></li>
-        <li><a routerLink="/client">Client</a></li>
-        <li><a routerLink="/login">Connexion</a></li>
+        <li><a routerLink="/" routerLinkActive="actif" [routerLinkActiveOptions]="{exact:true}">Accueil</a></li>
+        <li><a routerLink="/contact" routerLinkActive="actif">Nous contacter</a></li>
+        <li><a routerLink="/client" routerLinkActive="actif">Client</a></li>
+        <li><a routerLink="/animation" routerLinkActive="actif">Animation</a></li>
+        <li><a routerLink="/login" routerLinkActive="actif">Connexion</a></li>
       </ul>
     </nav>
   `,
   styles: [
       `:host{ /* sélecteur qui permet de sélectionner la balise qui contient votre vue*/
         padding: 0;
+      }
+      .actif{
+        color:red; 
       }
       ul{
         display: flex ;

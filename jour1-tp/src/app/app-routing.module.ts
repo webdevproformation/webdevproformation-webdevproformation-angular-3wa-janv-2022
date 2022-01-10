@@ -7,6 +7,7 @@ import {PageComponent} from "./component/page.component" ;
 import { ClientComponent } from './component/client.component';
 import { ClientOneComponent } from './component/client-one.component';
 import { NotFoundComponent } from "./component/not-found.component";
+import { AnimationComponent } from './component/animation.component';
 
 // router => url => Composant à afficher
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path : "client/:id" , component: ClientOneComponent },
   // l'ordre de déclaration des routes IMPORTANT mettre AVANT client/:id
   {path : "client" , component: ClientComponent },
+  { path : "animation" , component: AnimationComponent} ,
   {path : "**" , component:NotFoundComponent }, // si l'url n'existe pas
   // mettre en dernier 
 ];
