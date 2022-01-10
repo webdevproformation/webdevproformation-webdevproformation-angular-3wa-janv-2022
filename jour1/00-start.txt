@@ -1,0 +1,75 @@
+angular
+https://formation.webdevpro.net/angular
+login : angular
+passwd : google
+
+ng new jour1-tp
+y => fichier de routing 
+css 
+
+ng g ... => racine de projet jour1-tp => angular.json
+
+"@schematics/angular:component": {
+    "flat": true,
+    "inlineTemplate": true,
+    "inlineStyle": true,
+    "skipTests": true,
+    "prefix": ""
+}
+
+cd jour1-tp
+ng serve --open
+
+// routing => le fait de créer des liens hypertexte entre les composants
+// SPA => single page application => 
+// dans barre d'adresse change MAIS pas rechargement des ressources qui génère la page 
+
+// React / VueJS 
+// https://developer.mozilla.org/en-US/docs/Web/API/History_API
+
+// changer l'url de la page SANS rechargement des ressources 
+
+y => 
+
+nouveau fichier app-routing => 
+ROUTER (express)
+url => composant à afficher
+
+// app.module.ts (module racine)
+import { AppRoutingModule } from './app-routing.module';
+
+
+// créer deux composants 
+ng g c home
+ng g c contact
+
+fichiers contact.component.ts et home.component.ts => glissé dans le dossier component
+
+app.module.ts
+
+app.component.ts => 
+
+<router-outlet></router-outlet>  afficher le composant en fonction de l'url "contact"
+
+ng g c component/menu
+
+
+cas partique => 
+
+ 1 créer un nouveau composant login (stocker dans le dossier component)
+ ng g c component/login
+ 2 il soit accessible depuis l'adresse /login => afficher le composant 
+ 3 ajouter un lien vers ce composant dans le composant menu 
+
+// afficher dans la page d'accueil des articles 
+// data => ng g s service/data
+
+// cas pratique : 
+// créer un nouveau service => permet de récupérer des users
+// https://jsonplaceholder.typicode.com/users
+
+// récupérer TOUS les utilisateurs
+// récupérer 1 seul user via son id
+
+// créer une nouveau composant => client => afficher la liste de tous les clients (users)
+// chaque profil => lien voir en détail => afficher le profil user sélectionné 
