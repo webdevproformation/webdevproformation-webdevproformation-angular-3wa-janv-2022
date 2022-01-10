@@ -27,7 +27,6 @@ import { trigger, transition , style, keyframes , animate  } from "@angular/anim
         ]))
       ] )
     ])
-
   ],
   styles: [
     `:host{

@@ -50,4 +50,8 @@ créer une nouvelle animation slideInOut
 => le composant apparait => droite vers la gauche en 700ms pour apparaitre
 si vous cliquez dessus => disparaitre en glissant de gauche vers la droite et il disparait 
 
+// cas pratique 
+dans la composant home pour toutes les titres
 
+ajouter l'animation bouceIn
+https://github.com/animate-css/animate.css/blob/main/source/bouncing_entrances/bounceIn.css
