@@ -41,3 +41,13 @@ au moment où vous affichez le composant animation (cliquer sur le lien du menu 
 
 le titre se déplace horizontalement de gauche vers la droite de 300px en 1 seconde
 
+// -------------------
+
+cas pratique
+dans le composant fade ajouter une nouvelle balise 
+<h2>titre</h2>  
+créer une nouvelle animation slideInOut
+=> le composant apparait => droite vers la gauche en 700ms pour apparaitre
+si vous cliquez dessus => disparaitre en glissant de gauche vers la droite et il disparait 
+
+

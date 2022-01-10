@@ -14,6 +14,7 @@ import { ClientComponent } from './component/client.component';
 import { ClientOneComponent } from './component/client-one.component';
 import { NotFoundComponent } from './component/not-found.component';
 import { AnimationComponent } from './component/animation.component';
+import { FadeComponent } from './component/fade.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AnimationComponent } from './component/animation.component';
     ClientComponent,
     ClientOneComponent,
     NotFoundComponent,
-    AnimationComponent
+    AnimationComponent,
+    FadeComponent
   ],
   imports: [
     BrowserModule,
