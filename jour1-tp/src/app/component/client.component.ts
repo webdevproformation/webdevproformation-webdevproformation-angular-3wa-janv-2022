@@ -15,6 +15,11 @@ import { User } from "../service/user";
     </div>
   `,
   styles: [
+    `:host{
+      display:grid;
+      gap : 20px;
+      grid-template-columns : repeat(5, 1fr);
+    }`
   ]
 })
 export class ClientComponent implements OnInit {
