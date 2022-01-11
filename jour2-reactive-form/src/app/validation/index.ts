@@ -10,7 +10,8 @@ export class ValidationPersonnalise {
         }
         return null
     }
-    static isValidAdresse( control : AbstractControl) : ValidationErrors | null{
+    static isValidAdresse( control : AbstractControl ) : ValidationErrors | null{
+
         const pattern = /^[0-9]{2} .+/ ;
         // const pattern2 = new RegExp("^[0-9]{2} .+") ;
 
@@ -21,6 +22,21 @@ export class ValidationPersonnalise {
             }
         }
         return null ;
+    }
+    static isUnique(control : AbstractControl) : Promise<ValidationErrors | null>  {
+        return new Promise( function(resolve , reject){
+                setTimeout( () => {
+                    const data = ["Alain", "Pierre" , "Charles"]
+                    if(control.value != null && data.includes(control.value)){
+                        resolve({
+                            isUnique : true ,
+                            message : "le prénom saisit est déjà utilisé" 
+                        })
+                    } else {
+                        resolve(null)
+                    }
+                } , 1000) 
+        })
     }
 }
 

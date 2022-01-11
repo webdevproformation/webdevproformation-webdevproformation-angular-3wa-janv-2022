@@ -11,7 +11,9 @@ import { ValidationPersonnalise , superValidation} from "../validation"
       <input type="text" placeholder="votre nom" class="form-control my-4" formControlName="nom">
       <input type="text" placeholder="votre adresse" class="form-control my-4" formControlName="adresse">
       <input type="submit" class="btn btn-outline-success">
-    </form>`
+    </form>
+    <p *ngIf="prenom?.errors">{{ prenom?.errors | json  }}</p>
+    `
 })
 export class Form1Component implements OnInit {
   public onSubmit(){
@@ -29,10 +31,14 @@ export class Form1Component implements OnInit {
     // interdire les espaces dans les champs 
   ];
 
+  get prenom (){
+    return this.form.get("prenom")
+  }
+
   public form = new FormGroup({
-    prenom : new FormControl(null , superValidation(1, 10 )),
+    prenom : new FormControl(null , superValidation(3, 10) , ValidationPersonnalise.isUnique),
     nom : new FormControl("Tata" , superValidation(3, 10)),
-    adresse : new FormControl(null , ValidationPersonnalise.isValidAdresse)
+    adresse : new FormControl(null , ValidationPersonnalise.isValidAdresse  )
   })
   constructor() { }
 
