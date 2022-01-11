@@ -1,4 +1,4 @@
-import { trigger, transition , style, keyframes , animate  } from "@angular/animations";
+import { trigger, transition , style, keyframes , animate , query , group } from "@angular/animations";
 
 export const rotation =  trigger("flip" , [
     transition( "void => *" , [
@@ -31,3 +31,42 @@ export const deplacement = trigger( "deplacement" , [
         animate("2000ms cubic-bezier(.04,.74,.02,.93)") 
     ] )
 ] )
+
+export const pageAnimationSuiteSequentielle = trigger( "pageAnimationSuite" , [
+    transition("void => *" , [
+        query("p", [style({opacity : 0})] ),
+        query("img", [style({opacity : 0})] ),
+        query("h2" , [
+            style({opacity : 0}),
+            animate(700)
+        ]),
+        query("img" , [
+            style({opacity : 0 , transform : "translateY(-50px)"}),// haut vers le bas
+            animate(700)
+        ]),
+        query("p" , [
+            style({opacity : 0 , transform : "translateX(150px)"}),// haut vers le bas
+            animate(700)
+        ])
+    ]) 
+] ) // animation séquentielle l'une après l'autre 
+
+export const pageAnimationSuiteParallele = trigger( "pageAnimationSuite" , [
+    transition("void => *" , [
+        group([
+            query("h2" , [
+                style({opacity : 0}),
+                animate(700)
+            ]),
+            query("img" , [
+                style({opacity : 0 , transform : "translateY(-50px)"}),// haut vers le bas
+                animate(700)
+            ]),
+            query("p" , [
+                style({opacity : 0 , transform : "translateX(150px)"}),// haut vers le bas
+                animate(700)
+            ])
+        ])
+    ]) 
+] )
+
