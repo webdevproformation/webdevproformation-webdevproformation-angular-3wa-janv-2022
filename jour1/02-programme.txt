@@ -1,7 +1,7 @@
 Programme de la dernière semaine :
 
-reactive form 
-rxjs => Subject 
+reactive form  
+rxjs => Subject xxxxx 
 Authentification / autorisation
 Google Base de données + Authentification
 Module @NgModule({})
