@@ -9,7 +9,8 @@ import { rotation , grossir , deplacement } from "../animation"
     <h2 @deplacement>sous titre</h2>
     <p @flip>
       login works!
-    </p></div> 
+    </p>
+  </div> 
   `,
   animations : [ rotation , grossir , deplacement ],
   styles: [

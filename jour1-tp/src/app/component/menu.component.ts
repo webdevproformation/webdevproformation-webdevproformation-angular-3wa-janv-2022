@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
         <li><a routerLink="/contact" routerLinkActive="actif">Nous contacter</a></li>
         <li><a routerLink="/client" routerLinkActive="actif">Client</a></li>
         <li><a routerLink="/animation" routerLinkActive="actif">Animation</a></li>
+        <li><a routerLink="/animation-suite" routerLinkActive="actif">Animation Suite</a></li>
         <li><a routerLink="/login" routerLinkActive="actif">Connexion</a></li>
       </ul>
     </nav>`,
