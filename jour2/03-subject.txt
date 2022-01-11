@@ -36,3 +36,22 @@ import { Observable , Subject } from "rxjs";
         error : (ex) => { console.log(ex)},
         complete : () => { console.log("fin")}
       } )
+
+créer un nouveau composant total dans le projet jour2-tp
+
+dans ce composant vous allez afficher le nom total de cocktail trouvé 
+ce total se met à jour dès que l'on modifie la valeur saisie dans le champ input 
+
+// data$ 
+
+
+// dans composant resultat afficher dans une liste l'ensemble des cocktails trouvé :
+
+<article>
+ *  <h2>strDrink</h2>
+ *  <img => strDrinkThumb:>
+ *  <p></p>strInstructions:
+ *  <ul>
+ *  <li></li> la liste des ingrédients => null => rien si ça contient une string => <li></li>
+ * </ul>
+ * </article>

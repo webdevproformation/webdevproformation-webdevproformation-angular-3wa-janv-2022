@@ -15,7 +15,7 @@ export class PartageService {
     let url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
     if(textRecherche){
       url += textRecherche ; 
-    }else {
+    } else {
       url += "margarita" ;
     }
     return this.http.get(url)

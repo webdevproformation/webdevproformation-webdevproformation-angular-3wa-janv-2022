@@ -4,7 +4,7 @@ import { mergeMap , pluck } from "rxjs/operators";
 
 @Component({
   selector: 'app-resultat',
-  template: '<p>{{ p }}</p>',
+  template: '<pre>{{ p | json }}</pre>',
   styleUrls: ['./resultat.component.css']
 })
 export class ResultatComponent implements OnInit {
@@ -16,14 +16,16 @@ export class ResultatComponent implements OnInit {
     /* this.service.data$.subscribe( infoSaisie => {
       this.service.getCocktails(infoSaisie).subscribe( reponse => console.log(reponse) )
     } 
-    );  */
+    );
+      13h31 !! bon appétit !!! 
+    */
     this.service.data$ // subject 
       .pipe(
         mergeMap( infoSaisie =>  this.service.getCocktails(infoSaisie)),
         // {drinks : [] , date : "1234556"}
         pluck( "drinks") // 
       )
-      .subscribe( reponse => console.log(reponse) )
+      .subscribe( (reponse :any) => this.p = reponse )
     
   }
 // https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita

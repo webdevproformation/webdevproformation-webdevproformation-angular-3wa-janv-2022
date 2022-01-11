@@ -5,7 +5,10 @@ import { Component , OnInit } from '@angular/core';
   selector: 'app-root',
   template: `
     <h1>{{ title }}</h1>
-    <app-input></app-input>
+    <div>
+      <app-input></app-input>
+      <app-total></app-total>
+    </div>
     <hr>
     <app-resultat></app-resultat>
   `,
@@ -15,6 +18,11 @@ import { Component , OnInit } from '@angular/core';
       max-width:800px;
       margin: 0 auto;
       display:block;
+    }
+    div{
+      display: flex ;
+      justify-content:space-between;
+      align-items:center;
     }
   `]
 })
