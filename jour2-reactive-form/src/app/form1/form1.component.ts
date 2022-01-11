@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup , FormControl , Validators } from "@angular/forms";
+import { ValidationPersonnalise , superValidation} from "../validation"
 
 @Component({
   selector: 'form1',
@@ -23,12 +24,13 @@ export class Form1Component implements OnInit {
     Validators.minLength(5) , 
     Validators.maxLength(100),
     Validators.required,
+    ValidationPersonnalise.espaceInterdit
     // interdire les espaces dans les champs 
   ];
 
   public form = new FormGroup({
-    prenom : new FormControl(null , this.validation),
-    nom : new FormControl("Tata" , this.validation)
+    prenom : new FormControl(null , superValidation(1, 10 )),
+    nom : new FormControl("Tata" , superValidation(3, 10))
   })
   constructor() { }
 
