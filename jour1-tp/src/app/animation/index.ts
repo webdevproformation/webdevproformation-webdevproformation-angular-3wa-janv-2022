@@ -105,3 +105,16 @@ export const animationPersonnalisee = trigger( "animationPersonnalisee" , [
 // cas pratique : 
 // pour la page d'accueil => faire apparaitre l'un après l'autre chaque <article> de la page
 // opacity 
+
+// cas pratique 
+// au niveau du menu => ajouter un bouton 
+// cliquer sur le bouton masquer le menu vers le haut 
+// recliquer afficher le menu avec un effet de glisser vers le bas
+
+export const menuEffet = trigger( "menuEffet" , [
+    state("afficher" , style({ transform:"translateY(-100px)", opacity : 0})),
+    state("masquer" , style({ transform:"translateY(0px)", opacity : 1} )),
+    transition("masquer <=> afficher" , [
+        animate(1000)
+    ])
+] )
