@@ -9,6 +9,7 @@ import { ValidationPersonnalise , superValidation} from "../validation"
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
       <input type="text" placeholder="votre prénom" class="form-control" formControlName="prenom" >
       <input type="text" placeholder="votre nom" class="form-control my-4" formControlName="nom">
+      <input type="text" placeholder="votre adresse" class="form-control my-4" formControlName="adresse">
       <input type="submit" class="btn btn-outline-success">
     </form>`
 })
@@ -30,7 +31,8 @@ export class Form1Component implements OnInit {
 
   public form = new FormGroup({
     prenom : new FormControl(null , superValidation(1, 10 )),
-    nom : new FormControl("Tata" , superValidation(3, 10))
+    nom : new FormControl("Tata" , superValidation(3, 10)),
+    adresse : new FormControl(null , ValidationPersonnalise.isValidAdresse)
   })
   constructor() { }
 

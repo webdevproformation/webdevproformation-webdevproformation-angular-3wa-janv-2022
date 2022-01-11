@@ -10,6 +10,18 @@ export class ValidationPersonnalise {
         }
         return null
     }
+    static isValidAdresse( control : AbstractControl) : ValidationErrors | null{
+        const pattern = /^[0-9]{2} .+/ ;
+        // const pattern2 = new RegExp("^[0-9]{2} .+") ;
+
+        if(control.value != null && !pattern.test(control.value)){
+            return {
+                isValidAdresse : true ,
+                message : "veuillez respecter le pattern suivant ^[0-9]{2} .+"
+            }
+        }
+        return null ;
+    }
 }
 
 export const superValidation = function(min = 5 , max = 100 , reste = []){

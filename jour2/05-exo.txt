@@ -17,5 +17,8 @@ le controle doit respecter le pattern suivant
 1234 rue de Paris => KO 
 22 => KO 
 
+[]
+// https://regex101.com/
+
 
  */
