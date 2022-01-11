@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
         <li><a routerLink="/client" routerLinkActive="actif">Client</a></li>
         <li><a routerLink="/animation" routerLinkActive="actif">Animation</a></li>
         <li><a routerLink="/animation-suite" routerLinkActive="actif">Animation Suite</a></li>
+        <li><a routerLink="/custom" routerLinkActive="actif">Animation personnalisée</a></li>
         <li><a routerLink="/login" routerLinkActive="actif">Connexion</a></li>
       </ul>
     </nav>`,

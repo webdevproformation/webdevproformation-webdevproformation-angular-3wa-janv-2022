@@ -9,6 +9,7 @@ import { ClientOneComponent } from './component/client-one.component';
 import { NotFoundComponent } from "./component/not-found.component";
 import { AnimationComponent } from './component/animation.component';
 import { AnimationSuiteComponent } from './component/animation-suite.component';
+import { CustomComponent } from './component/custom.component';
 
 // router => url => Composant à afficher
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path : "client" , component: ClientComponent },
   { path : "animation" , component: AnimationComponent } ,
   { path : "animation-suite" , component : AnimationSuiteComponent }, 
+  { path : "custom" , component : CustomComponent }, 
   {path : "**" , component:NotFoundComponent }, // si l'url n'existe pas
   // mettre en dernier 
 ];

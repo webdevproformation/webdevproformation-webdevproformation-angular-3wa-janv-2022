@@ -1,4 +1,4 @@
-import { trigger, transition , style, keyframes , animate , query , group , stagger , animation , useAnimation , animateChild } from "@angular/animations";
+import { trigger, transition , style, keyframes , animate , query , group , stagger , animation , useAnimation , state } from "@angular/animations";
 
 export const rotation =  trigger("flip" , [
     transition( "void => *" , [
@@ -92,6 +92,14 @@ export const apparitionArticle = trigger("apparitionArticle" , [
        ])
     ])
 ]) 
+
+export const animationPersonnalisee = trigger( "animationPersonnalisee" , [
+    state("droite" , style({ transform : "translateX(200px)"})),
+    state("gauche" , style({ transform : "translateX(-100px)"})),
+    transition( "droite <=> gauche", [
+        animate(1000)
+    ] )
+] );
 // 10h45 @ toute suite bon café !!! 
 
 // cas pratique : 

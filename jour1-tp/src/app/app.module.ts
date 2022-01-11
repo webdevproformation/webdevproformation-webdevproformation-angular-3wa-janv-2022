@@ -16,6 +16,7 @@ import { NotFoundComponent } from './component/not-found.component';
 import { AnimationComponent } from './component/animation.component';
 import { FadeComponent } from './component/fade.component';
 import { AnimationSuiteComponent } from './component/animation-suite.component';
+import { CustomComponent } from './component/custom.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AnimationSuiteComponent } from './component/animation-suite.component';
     NotFoundComponent,
     AnimationComponent,
     FadeComponent,
-    AnimationSuiteComponent
+    AnimationSuiteComponent,
+    CustomComponent
   ],
   imports: [
     BrowserModule,
