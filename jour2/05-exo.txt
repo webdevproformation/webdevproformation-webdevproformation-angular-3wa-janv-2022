@@ -1,0 +1,21 @@
+/*
+Cas pratique - Enoncé :
+
+Dans la class ValidationPersonnalise, 
+1 ajouter une nouvelle méthode static isValidAdresse
+
+le controle doit respecter le pattern suivant
+  - deux premiers caractères chiffres === 22 
+  - espace obligatoire => 1 seul caractère
+  - lettre en minuscule ou majuscule ou le symbole espace minimum 1 caractère à l'infini 
+
+2 ajouter un nouveau champ dans le formulaire initulé adresse et 
+3 utiliser votre valideur personnalisé pour vérifier que le champ est conforme 
+
+22 rue de Paris => OK
+1 rue du près => KO
+1234 rue de Paris => KO 
+22 => KO 
+
+
+ */
