@@ -1,0 +1,38 @@
+import { Observable , Subject } from "rxjs";
+
+ const subj$ = new Subject<string>() // généricité
+      // créer un observable 
+      // abonner AVANT que les informations soient émises 
+      subj$.subscribe( 
+        {
+          next : (info) => { console.log(info)} ,
+          error : (ex) => { console.log(ex)},
+          complete : () => { console.log("fin")}
+        }
+      )
+      subj$.next("elément 1")
+      subj$.next("elément 2")
+      subj$.next("elément 3")
+      subj$.complete()
+      // utiliser directement sur cet observable des méthodes d'observeur
+      subj$.next("information émise après le complete")
+
+      // idéal pour partager une information entre des composants qui ne sont pas parents
+      // A => B @Input  
+      // B => A => @Output
+     
+
+      const obs$ = new Observable( function(  observeur ){
+        observeur.next("information 1")
+        observeur.next("information 2")
+        observeur.next("information 3")
+        observeur.complete()
+        observeur.next("information 4")
+      } )
+      //obs$.next()
+
+      obs$.subscribe( {
+        next : infos => console.log(infos),
+        error : (ex) => { console.log(ex)},
+        complete : () => { console.log("fin")}
+      } )

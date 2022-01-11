@@ -1,11 +1,11 @@
 Programme de la dernière semaine :
 
-reactive form
+reactive form 
 rxjs => Subject 
 Authentification / autorisation
 Google Base de données + Authentification
 Module @NgModule({})
-Animation => gestion des animations 
+Animation => gestion des animations  xxxx
 Angular material (concurrent de Bootstrap)
 Déployer le projet sur un hébergement 
 créer des Directives 

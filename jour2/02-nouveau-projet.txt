@@ -1,0 +1,11 @@
+cd ..
+ng new jour2-tp
+routing y
+CSS 
+
+// Subject 
+cd jour2-tp
+
+ng serve --open
+
+app.component.ts
