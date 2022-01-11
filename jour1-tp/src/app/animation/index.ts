@@ -1,4 +1,4 @@
-import { trigger, transition , style, keyframes , animate , query , group , stagger , animation , useAnimation } from "@angular/animations";
+import { trigger, transition , style, keyframes , animate , query , group , stagger , animation , useAnimation , animateChild } from "@angular/animations";
 
 export const rotation =  trigger("flip" , [
     transition( "void => *" , [
@@ -83,3 +83,17 @@ export const pageAnimationSuiteParallele = trigger( "pageAnimationSuite" , [
         ])
     ]) 
 ] )
+
+export const apparitionArticle = trigger("apparitionArticle" , [
+    transition("void => *" , [
+       query("article" , [
+        style({opacity : 0}),
+        stagger( 500 , animate(700))
+       ])
+    ])
+]) 
+// 10h45 @ toute suite bon café !!! 
+
+// cas pratique : 
+// pour la page d'accueil => faire apparaitre l'un après l'autre chaque <article> de la page
+// opacity 

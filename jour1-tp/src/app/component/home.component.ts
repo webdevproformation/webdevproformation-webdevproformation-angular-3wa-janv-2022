@@ -2,17 +2,21 @@ import { Component, OnInit } from '@angular/core';
 import { PostService } from "../service/post.service";
 import {Post} from "../service/post"
 import {trigger , animate , transition , keyframes, style} from "@angular/animations"
+import { apparitionArticle } from "../animation"
 @Component({
   selector: 'home',
   template: `
-    <article *ngFor="let article of articles">
+    <div @apparitionArticle *ngIf="show">
+      <article *ngFor="let article of articles" class="element">
       <h2 @bouceIn>{{ article.title }}</h2>
       <p>{{ article.body }}</p>
       <a [routerLink]="['page', article.id , article.title]">lire la suite ... </a>
-    </article>
+      </article>
+    </div>
   `,
   animations : [
     // rdv 9h00 demain !!!! 
+    apparitionArticle ,
     trigger("bouceIn" , [
       transition("void => *" , [
         animate(1000 , keyframes([
@@ -30,7 +34,7 @@ import {trigger , animate , transition , keyframes, style} from "@angular/animat
     ])
   ],
   styles: [`
-    :host{
+    div{
       display:grid;
       gap : 20px;
       grid-template-columns : repeat(3, 1fr);
@@ -39,9 +43,13 @@ import {trigger , animate , transition , keyframes, style} from "@angular/animat
 })
 export class HomeComponent implements OnInit {
   public articles : Array<Post> = [];
+  public show : boolean = false;
   constructor( private data : PostService) { }
   ngOnInit(): void {
-    this.data.getData().subscribe( articles => 
-      this.articles = articles );
+    this.data.getData().subscribe( articles => {
+      this.articles = articles 
+      this.show = true;
+    }
+    );
   }
 }
