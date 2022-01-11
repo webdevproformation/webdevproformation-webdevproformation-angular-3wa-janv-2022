@@ -5,6 +5,7 @@ import { Component , OnInit } from '@angular/core';
   selector: 'app-root',
   template: `
     <h1>{{ title }}</h1>
+    <app-behaviour></app-behaviour>
     <div>
       <app-input></app-input>
       <app-total></app-total>

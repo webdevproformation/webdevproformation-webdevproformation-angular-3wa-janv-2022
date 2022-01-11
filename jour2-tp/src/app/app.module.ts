@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { InputComponent } from './input/input.component';
 import { ResultatComponent } from './resultat/resultat.component';
 import { TotalComponent } from './total/total.component';
+import { BehaviourComponent } from './behaviour/behaviour.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InputComponent,
     ResultatComponent,
-    TotalComponent
+    TotalComponent,
+    BehaviourComponent
   ],
   imports: [
     BrowserModule,

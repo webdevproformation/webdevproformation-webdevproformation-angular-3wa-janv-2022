@@ -29,11 +29,10 @@ import { Observable } from 'rxjs';
   `]
 })
 export class ResultatComponent implements OnInit {
-
   public p : any;
   public ingrediants(cocktail : any) :string{
     let resultat : string = "";
-    for(let i = 1 ; i <=15 ; i++){
+    for(let i = 1 ; i <=15 ; i++) {
       if(cocktail["strIngredient"+i] && cocktail["strMeasure"+i]){
         resultat += `<li>${cocktail["strIngredient"+i]} -- ${cocktail["strMeasure"+i]}</li>`
       }
