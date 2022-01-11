@@ -1,4 +1,4 @@
-import { trigger, transition , style, keyframes , animate , query , group } from "@angular/animations";
+import { trigger, transition , style, keyframes , animate , query , group , stagger , animation , useAnimation } from "@angular/animations";
 
 export const rotation =  trigger("flip" , [
     transition( "void => *" , [
@@ -10,6 +10,15 @@ export const rotation =  trigger("flip" , [
       ]))
     ] )
 ]); 
+
+const tournerAnimation = animation(
+    animate(1000 , keyframes([
+        style({ transform: "perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, -360deg)" , offset : 0 }),
+        style({transform: "perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg)" , offset : 0.4 }),
+        style({ transform: "perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg)" , offset : 0.5}), 
+        style({transform: "perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg)}" , offset : 1 })
+      ]))
+)
 
 // easing vitesse d'execution d'un animation
 // https://cubic-bezier.com/#.17,.67,.83,.67
@@ -51,6 +60,8 @@ export const pageAnimationSuiteSequentielle = trigger( "pageAnimationSuite" , [
     ]) 
 ] ) // animation séquentielle l'une après l'autre 
 
+
+
 export const pageAnimationSuiteParallele = trigger( "pageAnimationSuite" , [
     transition("void => *" , [
         group([
@@ -65,8 +76,10 @@ export const pageAnimationSuiteParallele = trigger( "pageAnimationSuite" , [
             query("p" , [
                 style({opacity : 0 , transform : "translateX(150px)"}),// haut vers le bas
                 animate(700)
-            ])
+            ]),
+        ]),
+        query("li" , [
+            stagger(1000 ,  useAnimation(tournerAnimation))
         ])
     ]) 
 ] )
-
