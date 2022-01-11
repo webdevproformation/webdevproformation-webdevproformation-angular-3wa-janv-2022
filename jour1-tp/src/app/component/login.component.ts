@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { rotation , grossir } from "../animation"
+import { rotation , grossir , deplacement } from "../animation"
 
 @Component({
   selector: 'login',
   template: `
   <div>
     <h1 @grossir>connexion</h1> 
+    <h2 @deplacement>sous titre</h2>
     <p @flip>
       login works!
     </p></div> 
   `,
-  animations : [ rotation , grossir ],
+  animations : [ rotation , grossir , deplacement ],
   styles: [
     `div{
       width: 300px;
