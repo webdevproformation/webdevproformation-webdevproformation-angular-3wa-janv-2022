@@ -35,7 +35,9 @@ export class BehaviourComponent implements OnInit {
 
     const s4$ = new AsyncSubject<boolean>()
 
-    s4$.next(false);
+    // requete à une base de données [{....}]
+    // cache Subject 
+    s4$.next(false); // 
     s4$.subscribe( console.log )
     s4$.next(false);
     s4$.subscribe( console.log )
@@ -43,6 +45,7 @@ export class BehaviourComponent implements OnInit {
     s4$.subscribe( console.log )
 
     s4$.complete(); // disparu à 100% ET et on ne veut récupérer QUE la dernière valeur émise ?? 
+    // pause rdv 15h18 => reactive form 
 
 
   }
