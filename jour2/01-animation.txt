@@ -1,0 +1,8 @@
+créer des animations complexes 
+
+keyframes 
+
+comment stocker un animation pour l'utiliser sur plusieurs composants 
+
+app => créer un nouveau dossier animation/index.ts
+

@@ -12,6 +12,7 @@ import {trigger , animate , transition , keyframes, style} from "@angular/animat
     </article>
   `,
   animations : [
+    // rdv 9h00 demain !!!! 
     trigger("bouceIn" , [
       transition("void => *" , [
         animate(1000 , keyframes([
