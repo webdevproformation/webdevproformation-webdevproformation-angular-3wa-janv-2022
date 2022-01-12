@@ -12,8 +12,7 @@ import { ValidationPersonnalise , superValidation} from "../validation"
       <input type="text" placeholder="votre adresse" class="form-control my-4" formControlName="adresse">
       <input type="submit" class="btn btn-outline-success">
     </form>
-    <p *ngIf="prenom?.errors">{{ prenom?.errors | json  }}</p>
-    `
+    <p *ngIf="prenom?.errors">{{ erreurPrenom(prenom?.errors)  }}</p>`
 })
 export class Form1Component implements OnInit {
   public onSubmit(){
@@ -34,6 +33,14 @@ export class Form1Component implements OnInit {
   get prenom (){
     return this.form.get("prenom")
   }
+
+  public erreurPrenom (object : any):string{
+    if(object != null){
+      return object.message
+    }
+    return "";
+  }
+  // 
 
   public form = new FormGroup({
     prenom : new FormControl(null , superValidation(3, 10) , ValidationPersonnalise.isUnique),
