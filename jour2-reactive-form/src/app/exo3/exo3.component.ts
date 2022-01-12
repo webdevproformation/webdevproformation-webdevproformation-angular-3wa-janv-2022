@@ -71,6 +71,9 @@ export class Exo3Component implements OnInit {
           this.show = true;
           console.log(`AuthService ${reponse}`)
         }
+        if(reponse == "notLogged"){
+          this.show = false;
+        }
       }
     )
     if(localStorage.getItem("isLogged") == "yes"){

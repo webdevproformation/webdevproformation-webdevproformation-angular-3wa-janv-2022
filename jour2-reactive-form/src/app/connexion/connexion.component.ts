@@ -6,7 +6,10 @@ import { AuthService } from "../auth.service"
 @Component({
   selector: 'app-connexion',
   template: `
-    <h2>authentification via Firebase Auth</h2>
+    <div> 
+      <h2>authentification via Firebase Auth</h2>
+      <button (click)="onClickDeconnexion()">Déconnexion</button>
+    </div> 
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
       <input type="email" placeholder="email" formControlName="email">
       <input type="text" placeholder="password" formControlName="password">
@@ -15,6 +18,11 @@ import { AuthService } from "../auth.service"
   `
 })
 export class ConnexionComponent implements OnInit {
+  public onClickDeconnexion(){
+    localStorage.removeItem("isLogged"); // unset($_SESSION["isLogged"])
+    this.logged.isLogged$.next("notLogged");
+  }
+
   public form ;
   public onSubmit(){
     const {email , password} = this.form.value ;
