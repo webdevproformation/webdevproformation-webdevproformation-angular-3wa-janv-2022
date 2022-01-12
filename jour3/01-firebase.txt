@@ -6,4 +6,22 @@ gmail => et vous connectez !!
 
 https://firebase.google.com/ 
 
+// créer le composant exo3
+
+contient un formulaire 3 champs 
+
+nom (simple)
+compétences groupe 
+    langage
+    niveau 
+
+créer le formulaire en utilisant Formbuilder 
+
+une fois que les données sont récupérées => ajouter dans une nouvelle table dans Firebase 
+/exo3
+ ajouter les valeurs saisies 
+ une fois que le données sont enregistrées => les afficher en dessous du formulaire 
+
+
+
 
