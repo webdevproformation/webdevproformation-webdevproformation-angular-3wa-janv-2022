@@ -1,0 +1,12 @@
+créer un nouveau composant exo1
+
+contient un reactive form qui aura les champs suivants 
+
+  nom 
+
+  adresse => groupe rue / ville / cp 
+  
+  compétences => pourra mettre autant de compétence qu'il souhaite dans ce formulaire / il pourra aussi supprimer une compétence si il s'est trompé (tableau de valeurs)
+
+  pour tous les champs => minimum de 2 lettres à écrire pour que le champ soit valide
+
