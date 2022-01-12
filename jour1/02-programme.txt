@@ -1,9 +1,12 @@
 Programme de la dernière semaine :
 
-reactive form  
+reactive form  xxxxx 
 rxjs => Subject xxxxx 
 Authentification / autorisation
-Google Base de données + Authentification
+Google Base de données + Authentification => Firebase 
+
+json-server => base de données locale 
+
 Module @NgModule({})
 Animation => gestion des animations  xxxx
 Angular material (concurrent de Bootstrap)
