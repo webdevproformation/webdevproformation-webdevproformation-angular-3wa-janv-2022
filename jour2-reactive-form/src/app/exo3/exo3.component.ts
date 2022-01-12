@@ -16,12 +16,32 @@ import { map , tap } from "rxjs/operators";
         <input type="submit">
     </form>
     <ul>
-      <li *ngFor="let d of data">{{d.nom }} {{d.competences.langage}} {{d.competences.niveau}}</li>
+      <li *ngFor="let d of data">
+        <button (click)="onClickSuppr(d.key)">suppr</button>
+        <button (click)="onClickModif(d.key , nom , langage , niveau)">modifier</button>
+          <input [value]="d.nom" #nom>
+          <input [value]="d.competences.langage" #langage>
+          <input [value]="d.competences.niveau" #niveau>
+      </li>
     </ul>
   </div>`
 })
 export class Exo3Component implements OnInit {
   public form ;
+  public onClickModif(id : string , nom : HTMLInputElement , langage : HTMLInputElement , niveau : HTMLInputElement){
+    console.log(id, nom.value , langage.value , niveau.value); 
+    this.db.list("/exo3").update(id , {
+      nom : nom.value ,
+      competences : {
+        langage :langage.value ,
+        niveau : niveau.value
+      }
+    })
+  }
+
+  public onClickSuppr(id : string){
+      this.db.list("/exo3").remove(id); 
+  }
   public onSubmit(){
     const resultat = this.form.value;
     this.db.list("/exo3").push(resultat)
@@ -38,16 +58,18 @@ export class Exo3Component implements OnInit {
       })
     })
    }
-
   ngOnInit(): void {
     this.db.list("/exo3").snapshotChanges().pipe(
       tap(console.log), // [{}, {}]
       map(
-        (reponse : any) => reponse.map( (compte :any) => Object.assign({} , compte.payload.val()) )
+        (reponse : any) => reponse.map( 
+            (compte :any) => Object.assign({} , compte.payload.val() , { key : compte.key }) 
+          )
         ),
       tap(console.log), // [{ nom : '...' , competences : {}}, {}]
     )
-    .subscribe( reponse => this.data = reponse )
+    .subscribe( reponse => this.data = reponse ); 
   }
-
+ // supprimer et modifier => 
+ // rdv 15h32 bon café @ toute suite !! 
 }
