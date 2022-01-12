@@ -73,5 +73,4 @@ export class Exo1Component implements OnInit {
   constructor() { }
   ngOnInit(): void {
   }
-
 }
