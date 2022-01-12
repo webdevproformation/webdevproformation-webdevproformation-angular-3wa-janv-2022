@@ -20,6 +20,7 @@ import { FormBuilderComponent } from './form-builder/form-builder.component';
 import { Exo2Component } from './exo2/exo2.component';
 import { FormAddComponent } from './form-add/form-add.component';
 import { Exo3Component } from './exo3/exo3.component';
+import { ConnexionComponent } from './connexion/connexion.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { Exo3Component } from './exo3/exo3.component';
     FormBuilderComponent,
     Exo2Component,
     FormAddComponent,
-    Exo3Component
+    Exo3Component,
+    ConnexionComponent
   ],
   imports: [
     BrowserModule,
