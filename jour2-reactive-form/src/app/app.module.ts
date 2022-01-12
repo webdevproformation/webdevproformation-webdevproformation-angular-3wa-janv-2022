@@ -9,6 +9,7 @@ import { Form2Component } from './form2/form2.component';
 import { Form3Component } from './form3/form3.component';
 import { Exo1Component } from './exo1/exo1.component';
 import { FormBuilderComponent } from './form-builder/form-builder.component';
+import { Exo2Component } from './exo2/exo2.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormBuilderComponent } from './form-builder/form-builder.component';
     Form2Component,
     Form3Component,
     Exo1Component,
-    FormBuilderComponent
+    FormBuilderComponent,
+    Exo2Component
   ],
   imports: [
     BrowserModule,
