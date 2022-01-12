@@ -27,7 +27,7 @@ export class FormAddComponent implements OnInit {
       console.log(this.form.value);
       this.db.list("/clients").push(this.form.value)
       this.form.reset();
-      this.resultat = [];
+      // this.resultat = [];
     }
   }
   private validation = [Validators.required , Validators.minLength(2)];
@@ -42,15 +42,12 @@ export class FormAddComponent implements OnInit {
   ngOnInit(): void {
     this.db.list("/clients").snapshotChanges()
       .pipe(
-        //tap(console.log),
-        mergeMap( (reponse :any) => from(reponse) ), // transforme [{}, {}, {}]
-        // tap(console.log),
-        // {} ,{}, {}
-        map( (data :any) => data.payload.val() ), 
-        // tap( () => this.resultat = [] )
+        map(actions => 
+          actions.map( (a:any) => ({ key: a.key, ...a.payload.val() }))
+        )
       )
       .subscribe( reponse => {
-        this.resultat.push(reponse) 
+        this.resultat = reponse 
       })
   }
 }
