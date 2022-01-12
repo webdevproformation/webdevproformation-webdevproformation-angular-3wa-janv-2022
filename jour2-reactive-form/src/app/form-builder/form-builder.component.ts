@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form-builder',
@@ -22,7 +22,6 @@ import { FormBuilder } from '@angular/forms';
 })
 export class FormBuilderComponent implements OnInit {
   public form ; 
-
   public getImages(){
     if(this.form.get("images")){
       return (this.form.get("images") as any) ["controls"]
@@ -31,9 +30,9 @@ export class FormBuilderComponent implements OnInit {
   public onSubmit(){
     console.log(this.form.value);
   }
-  constructor(fb : FormBuilder) {
+  constructor(fb : FormBuilder) { // la nouvelle méthode !! 
     this.form = fb.group({
-      sujet : fb.control(null),
+      sujet : fb.control(null, Validators.minLength(2) ),
       info : fb.group({
           competence : fb.control(null),
           niveau : fb.control(null),
@@ -43,5 +42,6 @@ export class FormBuilderComponent implements OnInit {
   }
   ngOnInit(): void {
   }
-
 }
+
+
