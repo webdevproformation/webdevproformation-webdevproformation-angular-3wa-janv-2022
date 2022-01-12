@@ -11,3 +11,19 @@ contient un reactive form qui aura les champs suivants
   pour tous les champs => minimum de 2 lettres à écrire pour que le champ soit valide
 
 // rdv 10h45 => bon café !! 
+
+// ----------------------------
+
+créer le composant exo2 
+
+utiliser FormBuilder pour gérer le formulaire suivant 
+
+nom => champ unique 
+
+pourra ajouter un ou plusieurs email : 
+au minimum 1 et elle pourra en ajouter plus de 1 et il pourra aussi supprimer le mail si c'est erroné 
+
+commentaire => textarea champ unique 
+
+
+
