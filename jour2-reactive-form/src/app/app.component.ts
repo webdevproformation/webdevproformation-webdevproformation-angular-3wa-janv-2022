@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
     <app-form2></app-form2>
     <hr>
     <app-form3></app-form3>
+    <hr>
+    <app-exo1></app-exo1>
     `,
   styleUrls: ['./app.component.css']
 })
