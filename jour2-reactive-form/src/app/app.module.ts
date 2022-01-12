@@ -8,6 +8,8 @@ import { environment } from "../environments/environment"; //
 import { AngularFireModule } from "@angular/fire/compat";
 import { AngularFireDatabaseModule } from "@angular/fire/compat/database"
 
+// rdv 13h45 bon appetit !!!
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Form1Component } from './form1/form1.component';
@@ -16,6 +18,7 @@ import { Form3Component } from './form3/form3.component';
 import { Exo1Component } from './exo1/exo1.component';
 import { FormBuilderComponent } from './form-builder/form-builder.component';
 import { Exo2Component } from './exo2/exo2.component';
+import { FormAddComponent } from './form-add/form-add.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,8 @@ import { Exo2Component } from './exo2/exo2.component';
     Form3Component,
     Exo1Component,
     FormBuilderComponent,
-    Exo2Component
+    Exo2Component,
+    FormAddComponent
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
+    <app-form-add></app-form-add>
+    <hr>
     <app-exo2></app-exo2>
     <hr>
     <app-form-builder></app-form-builder>
