@@ -22,6 +22,13 @@ une fois que les données sont récupérées => ajouter dans une nouvelle table 
  ajouter les valeurs saisies 
  une fois que le données sont enregistrées => les afficher en dessous du formulaire 
 
+// cas pratique :
 
+// créer un service auth
+// contenir un Subject<string>()
+
+// si l'utilisateur un email / password correcte => "auth"
+
+// et dans le composant exo3 => il sera possible de modifier / supprimer les enregistrement
 
 

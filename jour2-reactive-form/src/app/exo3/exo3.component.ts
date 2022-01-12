@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms'; 
 import { AngularFireDatabase } from '@angular/fire/compat/database'; 
 import { map , tap } from "rxjs/operators";
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-exo3',
@@ -17,8 +18,8 @@ import { map , tap } from "rxjs/operators";
     </form>
     <ul>
       <li *ngFor="let d of data">
-        <button (click)="onClickSuppr(d.key)">suppr</button>
-        <button (click)="onClickModif(d.key , nom , langage , niveau)">modifier</button>
+        <button (click)="onClickSuppr(d.key)" *ngIf="show">suppr</button>
+        <button (click)="onClickModif(d.key , nom , langage , niveau)" *ngIf="show">modifier</button>
           <input [value]="d.nom" #nom>
           <input [value]="d.competences.langage" #langage>
           <input [value]="d.competences.niveau" #niveau>
@@ -28,6 +29,8 @@ import { map , tap } from "rxjs/operators";
 })
 export class Exo3Component implements OnInit {
   public form ;
+  public show : boolean = false;
+
   public onClickModif(id : string , nom : HTMLInputElement , langage : HTMLInputElement , niveau : HTMLInputElement){
     console.log(id, nom.value , langage.value , niveau.value); 
     this.db.list("/exo3").update(id , {
@@ -49,7 +52,10 @@ export class Exo3Component implements OnInit {
   }
   public data : Array<any>= []
 
-  constructor(fb : FormBuilder , private db : AngularFireDatabase) {
+  constructor(
+      fb : FormBuilder , 
+      private db : AngularFireDatabase,
+      private logged : AuthService) {
     this.form = fb.group({
       nom : [],
       competences : fb.group({
@@ -59,6 +65,18 @@ export class Exo3Component implements OnInit {
     })
    }
   ngOnInit(): void {
+    this.logged.isLogged$.subscribe( reponse  => 
+      {
+        if(reponse == "logged"){
+          this.show = true;
+          console.log(`AuthService ${reponse}`)
+        }
+      }
+    )
+    if(localStorage.getItem("isLogged") == "yes"){
+      this.show = true; 
+    }
+
     this.db.list("/exo3").snapshotChanges().pipe(
       tap(console.log), // [{}, {}]
       map(
