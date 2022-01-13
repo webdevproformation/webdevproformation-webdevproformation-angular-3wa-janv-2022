@@ -11,6 +11,8 @@ import { MenuComponent } from './commun/menu.component';
 
 import { HomeComponent } from './front/home.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTableModule} from '@angular/material/table';
 import { GestionComponent } from './back/gestion.component';
 import { NotAutorizedComponent } from './front/not-autorized.component';
 
@@ -26,7 +28,9 @@ import { NotAutorizedComponent } from './front/not-autorized.component';
     BrowserModule,
     AppRoutingModule,
     ConnexionModule, 
-    CoreModule
+    CoreModule,
+    BrowserAnimationsModule, 
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

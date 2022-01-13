@@ -22,3 +22,7 @@ récupérer des services et qui vont être utilisés partout (tous les autres mo
 
 ng g m core 
 
+firebase => récupérer les données qui sont stockées dans la table client 
+
+=> https://material.angular.io/components/table/examples
+afficher ces données dans un tableau généré par Angular Material
