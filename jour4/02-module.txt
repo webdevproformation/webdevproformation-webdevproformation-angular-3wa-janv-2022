@@ -1,0 +1,24 @@
+@NgModule({})
+
+4 manières différentes 
+
+Module de fonctionnalité 
+=> connexion => composant (visuel en + )
+
+app.module.ts => importer 
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule  } from '@angular/material/input';
+import { MatButtonModule } from "@angular/material/button";
+import { ReactiveFormsModule } from "@angular/forms";
+
+service => 
+
+ng g m front/connexion/connexion => composant de fonctionnalité 
+page et toutes ses dépendances pour quelle fonctionne ! 
+
+core module 
+récupérer des services et qui vont être utilisés partout (tous les autres modules / composants )
+
+ng g m core 
+

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GestionComponent } from './back/gestion.component';
-import { ConnexionComponent } from './front/connexion.component';
+import { ConnexionComponent } from './front/connexion/connexion/connexion.component';
 import { HomeComponent } from './front/home.component';
 import { NotAutorizedComponent } from './front/not-autorized.component';
 import { AuthGuardService } from './service/auth-guard.service';
