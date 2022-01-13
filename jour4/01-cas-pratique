@@ -1,0 +1,9 @@
+
+=> connexion à firebase ( exactement le même que hier )
+base de données + système authentification 
+mail@yahoo.fr // azerty
+
+=> les mettre au bonne endroit dans le projet Angular 
+=> installer npm install firebase @angular/fire --save
+
+=> mettre en place le module d'authenfication utilisé hier !! 

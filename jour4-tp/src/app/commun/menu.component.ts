@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {AuthService} from "../service/auth.service";
 
 @Component({
   selector: 'menu',
@@ -7,12 +8,11 @@ import { Component, OnInit, Input } from '@angular/core';
       <h1>{{ title }}</h1>
       <ul>
         <li><a routerLink="/" routerLinkActive="actif" [routerLinkActiveOptions]="{exact:true}">Accueil</a></li>
-        <li><a routerLink="/connexion" routerLinkActive="actif">Connexion</a></li>
-        <li><a routerLink="/admin" routerLinkActive="actif">Gestion</a></li>
-        <li><a routerLink="#">Déconnexion</a></li>
+        <li *ngIf="!show"><a routerLink="/connexion" routerLinkActive="actif" >Connexion</a></li>
+        <li *ngIf="show"><a routerLink="/admin" routerLinkActive="actif" >Gestion</a></li>
+        <li *ngIf="show"><a routerLink="#" (click)="onClickDeconnexion($event)" >Déconnexion</a></li>
       </ul>
-    <nav>
-  `,
+    <nav>`,
   styles: [
     `nav, ul{
       display: flex;
@@ -23,14 +23,19 @@ import { Component, OnInit, Input } from '@angular/core';
     }
     ul>*+*{
       margin-left:20px;
-    }`
-  ]
+    }`]
 })
 export class MenuComponent implements OnInit {
+  public show : boolean = false;
+  public onClickDeconnexion($event:Event){
+    $event.preventDefault();
+    this.auth.loggout();
+  }
   @Input() title : string = ""
-  constructor() { }
-
+  constructor(private auth : AuthService) { }
   ngOnInit(): void {
+    this.auth.logged$.subscribe( reponse => 
+    this.show = reponse )
   }
 
 }

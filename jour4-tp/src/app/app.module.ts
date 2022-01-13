@@ -3,6 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule  } from '@angular/material/input';
 import { MatButtonModule } from "@angular/material/button";
+import {ReactiveFormsModule} from "@angular/forms";
+
+import { environment } from "../environments/environment";
+import { AngularFireModule } from "@angular/fire/compat"
+import { AngularFireDatabaseModule } from "@angular/fire/compat/database";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,7 +29,10 @@ import { GestionComponent } from './back/gestion.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+   AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
