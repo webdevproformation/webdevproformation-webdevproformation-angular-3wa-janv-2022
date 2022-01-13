@@ -18,6 +18,13 @@ import { FirebaseService } from "../service/firebase.service"
       <th mat-header-cell *matHeaderCellDef> nom. </th>
       <td mat-cell *matCellDef="let element"> {{element.nom}} </td>
     </ng-container>
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef> action. </th>
+      <td mat-cell *matCellDef="let element"> 
+        <button>supprimer</button>
+        <button>modifier</button>
+      </td>
+    </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
@@ -29,7 +36,7 @@ import { FirebaseService } from "../service/firebase.service"
   ]
 })
 export class GestionComponent implements OnInit {
-  public displayedColumns: string[] = ['key', 'prenom', 'nom'];
+  public displayedColumns: string[] = ['key', 'prenom', 'nom' , 'action'];
   public dataSource : Array<any> = []
 
   constructor(private fire : FirebaseService) { }
