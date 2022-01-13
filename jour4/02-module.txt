@@ -26,3 +26,5 @@ firebase => récupérer les données qui sont stockées dans la table client
 
 => https://material.angular.io/components/table/examples
 afficher ces données dans un tableau généré par Angular Material
+
+ng g s service/firebase 
