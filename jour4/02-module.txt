@@ -34,3 +34,17 @@ ajouter la méthode add dans le service FirebaseService
 ajouter ce composant dans le composant gestion 
 
 automatiquement quand vous avez ajouter un client => mettre à jour automatiquement le tableau en dessous ! 
+
+cas pratique : 
+
+clicker que le bouton modifier => ouvrir une nouvelle page 
+
+http://localhost:4200/admin/modif/-MtDNzl3ucMOHdosGVPV
+
+formulaire 2 champs nom / prenom 
+déja rempli avec les valeurs concernées 
+valider => enregirstrer dans la base de données et redirection vers 
+http://localhost:4200/admin
+
+
+

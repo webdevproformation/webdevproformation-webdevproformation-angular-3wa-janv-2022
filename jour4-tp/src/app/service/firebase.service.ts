@@ -25,5 +25,12 @@ export class FirebaseService {
     return this.db.list(this.table).push(objet)
   }
 
+  public getOne( key : string){
+    return this.db.list(`${this.table}/${key}`).valueChanges()
+  }
+
+  public update( key : string , obj : any){
+    return this.db.list(this.table).update(key, obj)
+  }
 
 }
