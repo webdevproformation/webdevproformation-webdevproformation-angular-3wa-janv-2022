@@ -3,18 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { ConnexionModule } from './front/connexion/connexion/connexion.module'; 
 import { CoreModule } from './core/core.module'; 
-
 import { AppRoutingModule } from './app-routing.module';
+
+import { GestionModule } from './back/gestion.module';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './commun/menu.component';
-
 import { HomeComponent } from './front/home.component';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatTableModule} from '@angular/material/table';
-import { MatButtonModule } from '@angular/material/button';
-import { GestionComponent } from './back/gestion.component';
 import { NotAutorizedComponent } from './front/not-autorized.component';
 
 @NgModule({
@@ -22,7 +18,6 @@ import { NotAutorizedComponent } from './front/not-autorized.component';
     AppComponent,
     MenuComponent,
     HomeComponent,
-    GestionComponent,
     NotAutorizedComponent
   ],
   imports: [
@@ -30,9 +25,7 @@ import { NotAutorizedComponent } from './front/not-autorized.component';
     AppRoutingModule,
     ConnexionModule, 
     CoreModule,
-    BrowserAnimationsModule, 
-    MatTableModule,
-    MatButtonModule
+    GestionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

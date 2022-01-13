@@ -21,5 +21,9 @@ export class FirebaseService {
     this.db.list(this.table).remove(key);
   }
 
+  public add(objet : any){
+    return this.db.list(this.table).push(objet)
+  }
+
 
 }

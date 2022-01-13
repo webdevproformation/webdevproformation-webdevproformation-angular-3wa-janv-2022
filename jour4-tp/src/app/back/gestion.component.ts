@@ -5,6 +5,8 @@ import { FirebaseService } from "../service/firebase.service"
   selector: 'gestion',
   template: `
     <h1>gestion du site</h1>
+    <form-client></form-client>
+    <h2>liste des clients</h2>
     <table mat-table [dataSource]="dataSource">
     <ng-container matColumnDef="key">
       <th mat-header-cell *matHeaderCellDef> key. </th>
