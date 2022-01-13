@@ -1,0 +1,50 @@
+angular
+https://formation.webdevpro.net/angular
+login : angular
+passwd : google
+
+https://github.com/webdevproformation/webdevproformation-webdevproformation-angular-3wa-janv-2022
+
+ng new jour4-tp
+reactive form / Firebase ...
+
+Authentification / autorisation Guard 
+Module @NgModule({})
+Angular material
+
+ng serve --open
+
+application
+
+"@schematics/angular:component": {
+    "flat": true,
+    "skipTests": true,
+    "inlineStyle": true,
+    "inlineTemplate": true,
+    "prefix": ""
+}
+
+menu 
+ => Home  => liste d'articles 
+ => Connexion => formulaire  
+ => gestion  => ajouter des articles // Protégée Guard 
+
+ng g c 
+commun/menu 
+front/home => "/"
+front/connexion "/connexion"
+back/gestion  "/admin"
+
+fichier de routing 
+
+ng add @angular/material
+Indigo/Pink        [ Preview: https://material.angular.io?theme=indigo
+-pink
+
+police avec empattement => police serif 
+police de caractère sans empattement => police sans serif 
+
+// https://material.angular.io/
+// https://material.angular.io/components/input/overview
+
+// importer le composant / Directives 
