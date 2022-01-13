@@ -34,6 +34,9 @@ export class MenuComponent implements OnInit {
   @Input() title : string = ""
   constructor(private auth : AuthService) { }
   ngOnInit(): void {
+    if(localStorage.getItem("isLogged")){
+      this.show = true;
+    }
     this.auth.logged$.subscribe( reponse => 
     this.show = reponse )
   }
