@@ -16,4 +16,10 @@ export class FirebaseService {
         )
      )
   }
+  public delete(key : string){
+    /// .... 
+    this.db.list(this.table).remove(key);
+  }
+
+
 }

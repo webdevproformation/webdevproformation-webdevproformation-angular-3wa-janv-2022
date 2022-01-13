@@ -21,8 +21,8 @@ import { FirebaseService } from "../service/firebase.service"
     <ng-container matColumnDef="action">
       <th mat-header-cell *matHeaderCellDef> action. </th>
       <td mat-cell *matCellDef="let element"> 
-        <button>supprimer</button>
-        <button>modifier</button>
+        <button (click)="onClickSuppr(element.key)" mat-stroked-button color="warn">supprimer</button>
+        <button mat-stroked-button color="accent" class="ml-1">modifier</button>
       </td>
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -32,10 +32,18 @@ import { FirebaseService } from "../service/firebase.service"
   styles: [
     `table{
       width:100%;
-    }`
+    }
+    .ml-1{
+      margin-left:10px
+    }
+    `
   ]
 })
 export class GestionComponent implements OnInit {
+  public onClickSuppr(key :string){
+    this.fire.delete(key);
+  }
+
   public displayedColumns: string[] = ['key', 'prenom', 'nom' , 'action'];
   public dataSource : Array<any> = []
 
@@ -46,3 +54,4 @@ export class GestionComponent implements OnInit {
   }
 
 }
+// 15h22 bon café @ toute suite !! 

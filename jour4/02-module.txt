@@ -28,3 +28,9 @@ firebase => récupérer les données qui sont stockées dans la table client
 afficher ces données dans un tableau généré par Angular Material
 
 ng g s service/firebase 
+
+créer un nouveau composant back/form => permettre d'ajouter des nouveaux clients la base Firebase 
+ajouter la méthode add dans le service FirebaseService
+ajouter ce composant dans le composant gestion 
+
+automatiquement quand vous avez ajouter un client => mettre à jour automatiquement le tableau en dessous ! 

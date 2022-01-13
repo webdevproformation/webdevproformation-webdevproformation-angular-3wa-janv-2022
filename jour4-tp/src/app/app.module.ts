@@ -13,6 +13,7 @@ import { HomeComponent } from './front/home.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTableModule} from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
 import { GestionComponent } from './back/gestion.component';
 import { NotAutorizedComponent } from './front/not-autorized.component';
 
@@ -30,7 +31,8 @@ import { NotAutorizedComponent } from './front/not-autorized.component';
     ConnexionModule, 
     CoreModule,
     BrowserAnimationsModule, 
-    MatTableModule
+    MatTableModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
