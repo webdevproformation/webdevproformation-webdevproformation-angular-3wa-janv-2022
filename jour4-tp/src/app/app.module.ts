@@ -15,6 +15,7 @@ import { MenuComponent } from './commun/menu.component';
 import { HomeComponent } from './front/home.component';
 import { ConnexionComponent } from './front/connexion.component';
 import { GestionComponent } from './back/gestion.component';
+import { NotAutorizedComponent } from './front/not-autorized.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { GestionComponent } from './back/gestion.component';
     MenuComponent,
     HomeComponent,
     ConnexionComponent,
-    GestionComponent
+    GestionComponent,
+    NotAutorizedComponent
   ],
   imports: [
     BrowserModule,
