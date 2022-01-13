@@ -3,9 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'home',
   template: `
-    <p>
-      home works!
-    </p>
+    <img src="assets/mario.jpg" alt="" style="width:100%">
   `,
   styles: [
   ]
