@@ -1,0 +1,43 @@
+ng test
+
+// lancer un navigateur de test => chrome 
+// utiliser deux outils (librairies)
+// jasmine // karma 
+
+racine jour5-tp => karma.conf.js
+
+dans le dossier src/app
+
+xxxxxx.spec.xx
+
+test d'intégration 
+
+describe( "nom au test - scénario " , () => {
+    beforeEach( () => { })
+    afterEach( () => { })
+    beforeAll( () => {})
+    afterAll( () => {})
+    it("un type de test" , () => {
+        expect("traitement").methode("resultat attendu")
+        expect("traitement").methode("resultat attendu")
+        expect("traitement").methode("resultat attendu")
+    })
+    it("un type de test" , () => { 
+        expect("traitement").methode("resultat attendu")
+    })
+    it("un type de test" , () => { 
+        expect("traitement").methode("resultat attendu")
+    })
+    it("un type de test" , () => { 
+        expect("traitement").methode("resultat attendu")
+    })
+} )
+
+// cas pratique : 
+// dans AppComponent créer une méthode exo1 qui retourne un tableau
+["EUR", "DOL", "YEN"]
+
+créer un test unitaire dans le fichier premiertest.spec.ts 
+
+qui va vérifier que le tableau contient bien 3 valeurs 
+qui va vérifier que le tableau contient bien les valeurs EUR DOL et YEN => toContain()
