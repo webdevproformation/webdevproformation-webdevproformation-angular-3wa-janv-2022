@@ -17,25 +17,13 @@ import { MenuComponent } from './commun/menu.component';
 import { HomeComponent } from './front/home.component';
 
 import { NotAutorizedComponent } from './front/not-autorized.component';
-import { LasuitePipe } from './lasuite.pipe';
-import { TitrePipe } from './titre.pipe';
-import { ImageDirective } from './image.directive';
-import { ParagraphDirective } from './paragraph.directive';
-import { BtnDirective } from './btn.directive';
-import { TitreDirective } from './titre.directive';
-
+import {PartageModule } from "./partage/partage.module";
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     HomeComponent,
-    NotAutorizedComponent,
-    LasuitePipe,
-    TitrePipe,
-    ImageDirective,
-    ParagraphDirective,
-    BtnDirective,
-    TitreDirective
+    NotAutorizedComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +31,8 @@ import { TitreDirective } from './titre.directive';
     ConnexionModule, 
     CoreModule,
     GestionModule,
-    HttpClientModule
+    HttpClientModule,
+    PartageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
