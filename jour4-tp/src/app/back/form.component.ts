@@ -20,12 +20,14 @@ import { ActivatedRoute, Router } from "@angular/router";
     </form>
   `,
   styles: [
-    `form{
-      display: flex;
-      align-items:baseline; 
-    }
-    form> *+*{
-      margin-left:20px;
+    `@media (min-width:650px){
+      form{
+        display: flex;
+        align-items:baseline; 
+      }
+      form> *+*{
+        margin-left:20px;
+      }
     }`
   ]
 })

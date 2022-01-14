@@ -1,0 +1,10 @@
+créer un nouveau pipe personnalisé 
+
+qui s'appelle titre 
+=> passer un titre (article)
+
+=> retourner le titre si le contenu de l'article est > 20 mots dans le contenu de l'article ! 
+
+titre étoile ⭐ 
+sinon 
+titre 🍎 
