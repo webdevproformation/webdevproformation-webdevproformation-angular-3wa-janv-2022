@@ -26,3 +26,21 @@ pour chaque article => fusionner
 
 => afficher dans le composant home les articles avec les commentaires associés 
 utiliser le pipe async dans la vue 
+
+Exo 2
+
+ajouter dans votre service Data une nouvelle méthode
+articleCompleteAvecAuteur
+
+deux requêtes 
+https://jsonplaceholder.typicode.com/posts
+https://jsonplaceholder.typicode.com/users
+
+pour chaque users 
+    toutes ses propriétés
+    [
+        posts associés
+    ]
+
+=> afficher dans le composant home les users avec les posts associés 
+utiliser le pipe async dans la vue 
