@@ -59,3 +59,17 @@ bordure 2px solid green
 4 coins avec un border radius de 5px ;
 si vous cliquez dessus => changer le texte par 'aller sur la page"
 si vous recliquez dessus => "lire la suite "
+
+------------------------------------
+
+cas pratique :
+créer une directive titre 
+
+ne fonctionne que les balises <h1>
+
+peut lui donner 1 valeur dans <h1 [appTitre]="true">Texte</h1>
+
+si la valeur est true => centrer la balise h1 dans la page 
+si la valeur est false ou vide ou undefined => laisser à gauche et vous la souligner
+
+tester cette directive sur une balise h1 dans le composant home 
