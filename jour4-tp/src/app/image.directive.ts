@@ -12,6 +12,8 @@ export class ImageDirective {
           e.target.classList.toggle("border")
         }
       } )
+
+      
   }
 
 }

@@ -22,6 +22,7 @@ import { TitrePipe } from './titre.pipe';
 import { ImageDirective } from './image.directive';
 import { ParagraphDirective } from './paragraph.directive';
 import { BtnDirective } from './btn.directive';
+import { TitreDirective } from './titre.directive';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { BtnDirective } from './btn.directive';
     TitrePipe,
     ImageDirective,
     ParagraphDirective,
-    BtnDirective
+    BtnDirective,
+    TitreDirective
   ],
   imports: [
     BrowserModule,

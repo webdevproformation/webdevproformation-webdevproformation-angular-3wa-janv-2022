@@ -5,6 +5,7 @@ import { DataService } from '../service/data.service';
 @Component({
   selector: 'home',
   template: `
+    <h1 [appTitre]="true">Titre</h1>
     <div>
       <button appBtn></button>
     </div>
