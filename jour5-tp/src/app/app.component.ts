@@ -22,4 +22,8 @@ export class AppComponent {
     }
     return 0; // lui donner au moins 2 it() dans le test unitaire 
   }
+
+  public exo1(){
+    return ["EUR", "DOL", "YEN"]
+  }
 }
