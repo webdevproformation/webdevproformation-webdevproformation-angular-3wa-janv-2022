@@ -5,6 +5,9 @@ import { DataService } from '../service/data.service';
 @Component({
   selector: 'home',
   template: `
+    <div>
+      <button appBtn></button>
+    </div>
     <img alt="" appImage>
     <p appParagraph></p>
     <article *ngFor="let article of data.getArticles()">

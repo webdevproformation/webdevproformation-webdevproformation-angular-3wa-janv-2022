@@ -21,6 +21,7 @@ import { LasuitePipe } from './lasuite.pipe';
 import { TitrePipe } from './titre.pipe';
 import { ImageDirective } from './image.directive';
 import { ParagraphDirective } from './paragraph.directive';
+import { BtnDirective } from './btn.directive';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ParagraphDirective } from './paragraph.directive';
     LasuitePipe,
     TitrePipe,
     ImageDirective,
-    ParagraphDirective
+    ParagraphDirective,
+    BtnDirective
   ],
   imports: [
     BrowserModule,
