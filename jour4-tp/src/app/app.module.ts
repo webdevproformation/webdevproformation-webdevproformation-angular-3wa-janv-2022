@@ -20,6 +20,7 @@ import { NotAutorizedComponent } from './front/not-autorized.component';
 import { LasuitePipe } from './lasuite.pipe';
 import { TitrePipe } from './titre.pipe';
 import { ImageDirective } from './image.directive';
+import { ParagraphDirective } from './paragraph.directive';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ImageDirective } from './image.directive';
     NotAutorizedComponent,
     LasuitePipe,
     TitrePipe,
-    ImageDirective
+    ImageDirective,
+    ParagraphDirective
   ],
   imports: [
     BrowserModule,

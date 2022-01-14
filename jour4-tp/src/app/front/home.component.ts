@@ -6,6 +6,7 @@ import { DataService } from '../service/data.service';
   selector: 'home',
   template: `
     <img alt="" appImage>
+    <p appParagraph></p>
     <article *ngFor="let article of data.getArticles()">
       <h2>{{article.titre | uppercase | titre:article.contenu }}</h2>
       <h3>{{article.titre | titlecase | titre:article.contenu }}</h3>
