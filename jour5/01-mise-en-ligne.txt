@@ -1,0 +1,15 @@
+1 npm i -g angular-cli-ghpages
+
+2 créer un repository et récupérer la ligne pour créer le remote 
+
+git init
+git add *
+git commit -m "mise en production"
+git remote add origin https://github.com/webdevproformation/3wa-demo-janv2022.git
+git push -u origin main
+
+
+ng build --base-href="https://[votre-nom-git].github.io/reposity/"
+ng build --base-href="https://webdevproformation.github.io/3wa-demo-janv2022/"
+
+ngh --dir dist/jour4-tp

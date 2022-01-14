@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './commun/menu.component';
 import { HomeComponent } from './front/home.component';
 import { NotAutorizedComponent } from './front/not-autorized.component';
-import { PartageModule } from "./partage/partage.module";
+import { PartageModule } from "./partage/partage.module"; // 15h08 ! 
 @NgModule({
   declarations: [
     AppComponent,
