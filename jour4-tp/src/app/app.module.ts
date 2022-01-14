@@ -1,23 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from "@angular/common/http";
-
-import { registerLocaleData } from "@angular/common";
-import localeFr from "@angular/common/locales/fr";
-registerLocaleData(localeFr , "fr");
-
 import { ConnexionModule } from './front/connexion/connexion/connexion.module'; 
 import { CoreModule } from './core/core.module'; 
 import { AppRoutingModule } from './app-routing.module';
-
 import { GestionModule } from './back/gestion.module';
-
 import { AppComponent } from './app.component';
 import { MenuComponent } from './commun/menu.component';
 import { HomeComponent } from './front/home.component';
-
 import { NotAutorizedComponent } from './front/not-autorized.component';
-import {PartageModule } from "./partage/partage.module";
+import { PartageModule } from "./partage/partage.module";
 @NgModule({
   declarations: [
     AppComponent,
