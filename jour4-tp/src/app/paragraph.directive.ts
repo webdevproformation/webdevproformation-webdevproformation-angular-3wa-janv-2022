@@ -4,7 +4,7 @@ import { Directive, ElementRef , Input , OnInit } from '@angular/core';
   selector: '[appParagraph]'
 })
 export class ParagraphDirective implements OnInit {
-  @Input() appParagraph : string| boolean | undefined;
+  @Input() appParagraph : string| boolean | undefined ;
   constructor( private balise : ElementRef ) {
     // balise.nativeElement.
     console.log(this.appParagraph); 

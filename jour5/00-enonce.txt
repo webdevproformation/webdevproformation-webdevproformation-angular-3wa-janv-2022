@@ -48,3 +48,14 @@ utiliser le pipe async dans la vue
 // création de Directives
 
 ng g d image
+
+cas pratique : 
+veuillez créer une nouvelle directive btn 
+
+doit être utilisé uniquement sur les balises <button>
+
+remplir la balise avec un texte par défaut : "lire la suite "
+bordure 2px solid green
+4 coins avec un border radius de 5px ;
+si vous cliquez dessus => changer le texte par 'aller sur la page"
+si vous recliquez dessus => "lire la suite "
