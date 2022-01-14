@@ -19,6 +19,7 @@ import { HomeComponent } from './front/home.component';
 import { NotAutorizedComponent } from './front/not-autorized.component';
 import { LasuitePipe } from './lasuite.pipe';
 import { TitrePipe } from './titre.pipe';
+import { ImageDirective } from './image.directive';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { TitrePipe } from './titre.pipe';
     HomeComponent,
     NotAutorizedComponent,
     LasuitePipe,
-    TitrePipe
+    TitrePipe,
+    ImageDirective
   ],
   imports: [
     BrowserModule,

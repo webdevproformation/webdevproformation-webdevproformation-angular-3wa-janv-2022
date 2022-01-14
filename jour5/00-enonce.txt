@@ -43,4 +43,8 @@ pour chaque users
     ]
 
 => afficher dans le composant home les users avec les posts associés 
-utiliser le pipe async dans la vue 
+utiliser le pipe async dans la vue
+
+// création de Directives
+
+ng g d image
