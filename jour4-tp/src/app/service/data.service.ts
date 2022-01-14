@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-
+import { HttpClient } from '@angular/common/http';
+import { combineLatest, forkJoin, Observable } from 'rxjs';
+import { map } from "rxjs/operators";
 @Injectable({
   providedIn: 'root'
 })
@@ -10,8 +12,38 @@ export class DataService {
     { id : 2 , titre : "article 2" , contenu : "lorem ipsum" , dt_publication : new Date() , prix : 20.5 },
     { id : 3 , titre : "article 3" , contenu : "lorem ipsum" , dt_publication : new Date() , prix : 100},
   ]
-  constructor() { }
+  constructor(private http : HttpClient) { }
   public getArticles(){
     return this.articles; 
   }
+  public getArticleFactices(){
+    return this.http.get("https://jsonplaceholder.typicode.com/posts")
+  }
+
+  public articleComplete(){
+    const articles$ =  this.getArticleFactices()
+    const commentaires$ = this.http.get("https://jsonplaceholder.typicode.com/comments");
+
+    return (combineLatest([articles$ , commentaires$]) as Observable<Array<any>>)
+    .pipe(
+      map( ( [articles , commentaires])  => {
+        return articles.map( (article : any) => Object.assign({} , article , { commentaires : commentaires.filter( (commentaire : any) => commentaire.postId == article.id ) }  ) )
+      })
+    )
+    /* forkJoin ({
+      articles : articles$,
+      commentaires : commentaires$
+    })
+    .pipe(
+      map (
+        ({articles , commentaires}) => {
+        return  articles.map( (article : any) => article.id === commentaires.postId )
+      })
+    )
+    .subscribe(
+      console.log
+    ) */
+
+  }
+
 }

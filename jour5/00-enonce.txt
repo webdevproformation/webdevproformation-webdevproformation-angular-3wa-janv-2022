@@ -8,3 +8,21 @@ qui s'appelle titre
 titre étoile ⭐ 
 sinon 
 titre 🍎 
+
+ajouter dans votre service Data une nouvelle méthode
+articleComplete
+
+deux requêtes 
+https://jsonplaceholder.typicode.com/posts
+https://jsonplaceholder.typicode.com/comments
+
+pour chaque article => fusionner 
+{
+    l'article 
+    [
+        commentaires associés
+    ]
+}
+
+=> afficher dans le composant home les articles avec les commentaires associés 
+utiliser le pipe async dans la vue 

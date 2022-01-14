@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from "@angular/common/http";
 
 import { registerLocaleData } from "@angular/common";
 import localeFr from "@angular/common/locales/fr";
@@ -17,6 +18,7 @@ import { HomeComponent } from './front/home.component';
 
 import { NotAutorizedComponent } from './front/not-autorized.component';
 import { LasuitePipe } from './lasuite.pipe';
+import { TitrePipe } from './titre.pipe';
 
 @NgModule({
   declarations: [
@@ -24,14 +26,16 @@ import { LasuitePipe } from './lasuite.pipe';
     MenuComponent,
     HomeComponent,
     NotAutorizedComponent,
-    LasuitePipe
+    LasuitePipe,
+    TitrePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ConnexionModule, 
     CoreModule,
-    GestionModule
+    GestionModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
