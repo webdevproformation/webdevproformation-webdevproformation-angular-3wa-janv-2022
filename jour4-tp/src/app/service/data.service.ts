@@ -45,5 +45,23 @@ export class DataService {
     ) */
 
   }
+  
 
+  public articleCompleteAvecAuteur(){
+    const posts$ = this.http.get("https://jsonplaceholder.typicode.com/posts");
+    const users$ = this.http.get("https://jsonplaceholder.typicode.com/users");
+
+    return (combineLatest([users$ , posts$]) as Observable<[interfaceUser[],interfacePost[]]>)
+      .pipe( 
+        map( ( [users , posts] ) => { 
+          return users.map( user => Object.assign({} , user , { articles : posts.filter( post  => post.userId === user.id ) }) )
+        })
+      )
+  }
+}
+interface interfacePost{
+  userId: number
+}
+interface interfaceUser{
+  id: number
 }

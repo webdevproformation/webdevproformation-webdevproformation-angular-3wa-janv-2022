@@ -21,7 +21,7 @@ import { DataService } from '../service/data.service';
       <h2>{{article.title | titre: article.body}}</h2>
       <p>{{ article.body  }}</p>
     </article> -->
-    <article *ngFor="let article of articleComplet$ | async">
+    <!--<article *ngFor="let article of articleComplet$ | async">
       <h2>{{article.title | titre: article.body}}</h2>
       <p>{{ article.body  }}</p>
       <h3>commentaires associés :</h3>
@@ -30,6 +30,13 @@ import { DataService } from '../service/data.service';
           {{commentaire.name}} ------ {{ commentaire.body }}
         </li>
       </ul>
+    </article>--> 
+    <article *ngFor="let user of auteurAvecArticle$ | async">
+      <h2>{{user.name}}</h2>
+      <p>{{ user.email }}</p>
+        <ul>
+          <li *ngFor="let article of user.articles">{{ article.title | titre:article.body }}</li>
+        </ul>
     </article>
   `,
   styles: [
@@ -38,11 +45,13 @@ import { DataService } from '../service/data.service';
 export class HomeComponent implements OnInit {
   public posts$   : Observable<any>  | undefined ;
   public articleComplet$   : Observable<any>  | undefined ;
+  public auteurAvecArticle$   : Observable<any>  | undefined ;
   constructor(public data : DataService ) { 
   }
   ngOnInit(): void {
     this.posts$ = this.data.getArticleFactices()
     this.articleComplet$ = this.data.articleComplete(); 
+    this.auteurAvecArticle$ = this.data.articleCompleteAvecAuteur();
   }
 
 }
